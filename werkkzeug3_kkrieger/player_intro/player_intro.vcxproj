@@ -97,8 +97,7 @@
       <CallingConvention>StdCall</CallingConvention>
       <ForcedIncludeFiles>$(SolutionDir)/player_intro/intro_config.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
-    <Link>
-      <AdditionalDependencies>winmm.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    <Link><AdditionalDependencies>winmm.lib;dxguid.lib;libcmt.lib;libvcruntime.lib;libucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)player_intro.exe</OutputFile>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
