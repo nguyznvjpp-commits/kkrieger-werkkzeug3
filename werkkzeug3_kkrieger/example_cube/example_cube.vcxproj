@@ -82,6 +82,8 @@
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)example_cube.exe</OutputFile>
+      <IgnoreSpecificDefaultLibraries>libc.lib;libcd.lib</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
