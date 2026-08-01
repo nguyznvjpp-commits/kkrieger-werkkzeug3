@@ -24,7 +24,7 @@ jobs:
       - name: Build Werkkzeug
         run: |
           $env:Path += ";" + $pwd.Path + "\yasm-1.3.0\;";
-          msbuild 'werkkzeug3_kkrieger/wz3projects.sln' /p:configuration=Player Release /p:platform=x86
+          msbuild 'werkkzeug3_kkrieger/wz3projects.sln' /p:configuration="Player Release" /p:platform=x86
 
       - name: Build GenThree
         run: |
