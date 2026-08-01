@@ -98,8 +98,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>$(SolutionDir)/player_kkrieger/kkrieger_config.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
-    <Link>
-      <AdditionalDependencies>winmm.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    <Link><AdditionalDependencies>winmm.lib;dxguid.lib;libcmt.lib;libvcruntime.lib;libucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)player_kkrieger.exe</OutputFile>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
