@@ -51,7 +51,7 @@ jobs:
             ${{ github.workspace }}/werkkzeug3_kkrieger/shadercompile/Release/shadercompile.exe
             ${{ github.workspace }}/werkkzeug3_kkrieger/werkkzeug3/Release/werkkzeug3.exe
             ${{ github.workspace }}/werkkzeug3_kkrieger/data/*
-            ${{ github.workspace }}/genthree/Debug/genthree.exe
+            ${{ github.workspace }}/genthree/Release/genthree.exe
             ${{ github.workspace }}/genthree/data/*
             ${{ github.workspace }}/docs/*
           if-no-files-found: warn
