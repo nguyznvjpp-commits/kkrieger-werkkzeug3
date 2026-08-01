@@ -9,7 +9,7 @@ on:
 
 env:
   SOLUTION_FILE_PATH: .
-  BUILD_CONFIGURATION: Debug
+  BUILD_CONFIGURATION: Release
 
 jobs:
   build:
@@ -24,12 +24,12 @@ jobs:
       - name: Build Werkkzeug
         run: |
           $env:Path += ";" + $pwd.Path + "\yasm-1.3.0\;";
-          msbuild 'werkkzeug3_kkrieger/wz3projects.sln' /p:configuration=Debug /p:platform=x86
+          msbuild 'werkkzeug3_kkrieger/wz3projects.sln' /p:configuration=Release /p:platform=x86
 
       - name: Build GenThree
         run: |
           $env:Path += ";" + $pwd.Path + "\yasm-1.3.0\;";
-          msbuild 'genthree/genthree.sln' /p:configuration=Debug /p:platform=Win32
+          msbuild 'genthree/genthree.sln' /p:configuration=Release /p:platform=Win32
 
       # - run: Get-ChildItem -Recurse
         
@@ -44,12 +44,12 @@ jobs:
         with:
           name: Kkrieger-Werkkzeug-#${{ github.run_number }}-${{ github.sha }}
           path: |
-            ${{ github.workspace }}/werkkzeug3_kkrieger/example_cube/Debug/example_cube.exe
-            ${{ github.workspace }}/werkkzeug3_kkrieger/player_demo/Debug/player_demo.exe
-            ${{ github.workspace }}/werkkzeug3_kkrieger/player_intro/Debug/player_intro.exe
-            ${{ github.workspace }}/werkkzeug3_kkrieger/player_kkrieger/Debug/player_kkrieger.exe
-            ${{ github.workspace }}/werkkzeug3_kkrieger/shadercompile/Debug/shadercompile.exe
-            ${{ github.workspace }}/werkkzeug3_kkrieger/werkkzeug3/Debug/werkkzeug3.exe
+            ${{ github.workspace }}/werkkzeug3_kkrieger/example_cube/Release/example_cube.exe
+            ${{ github.workspace }}/werkkzeug3_kkrieger/player_demo/Release/player_demo.exe
+            ${{ github.workspace }}/werkkzeug3_kkrieger/player_intro/Release/player_intro.exe
+            ${{ github.workspace }}/werkkzeug3_kkrieger/player_kkrieger/Release/player_kkrieger.exe
+            ${{ github.workspace }}/werkkzeug3_kkrieger/shadercompile/Release/shadercompile.exe
+            ${{ github.workspace }}/werkkzeug3_kkrieger/werkkzeug3/Release/werkkzeug3.exe
             ${{ github.workspace }}/werkkzeug3_kkrieger/data/*
             ${{ github.workspace }}/genthree/Debug/genthree.exe
             ${{ github.workspace }}/genthree/data/*
