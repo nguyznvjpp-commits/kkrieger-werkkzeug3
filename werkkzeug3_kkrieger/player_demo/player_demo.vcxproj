@@ -120,6 +120,7 @@
     <ClCompile Include="..\materials\materialdirect.cpp" />
     <ClCompile Include="..\materials\rtmanager.cpp" />
     <ClCompile Include="..\shadercodegen.cpp" />
+    <ClCompile Include="..\_iob.cpp" />
     <ClCompile Include="..\_lekktor.cpp" />
     <ClCompile Include="..\_ogg.cpp" />
     <ClCompile Include="..\_start.cpp" />
